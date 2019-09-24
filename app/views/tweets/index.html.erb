@@ -11,16 +11,7 @@
     </header>
     <div class="contents">
       <% @tweets.each do |tweet| %>
-       <div class="message">
-        <%= image_tag "cat1.png" %>
-       <div class="message">
-          <p class="user_name">
-            <%= tweet.name %>
-          </p>
-          <p class="text">
-          <%= tweet.text %>
-          </p>
-        </div>
+        <%= render partial: "tweet", locals: { tweet: tweet } %>
         <% end %>
       </div>
     </div>
